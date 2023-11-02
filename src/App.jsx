@@ -140,7 +140,11 @@ function App() {
       span3.to(".span3", { color: "white", delay: 0.1 });
     });
 
-    return () => ctx.revert();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      ctx.revert();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handleScroll = () => {
@@ -152,13 +156,6 @@ function App() {
       setImageNumber(newImageNumber);
     }
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); // Empty dependency array means this useEffect runs once, similar to componentDidMount
 
   const formattedNumber = String(imageNumber).padStart(3, "0");
   const imageSrc = `./animation1/${formattedNumber}.png`;
