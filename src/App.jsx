@@ -3,9 +3,10 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Spline from "@splinetool/react-spline";
 
 function App() {
-  const [imageNumber, setImageNumber] = useState(0);
+  // const [imageNumber, setImageNumber] = useState(0);
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -140,29 +141,34 @@ function App() {
       span3.to(".span3", { color: "white", delay: 0.1 });
     });
 
-    window.addEventListener("scroll", handleScroll);
+    // window.addEventListener("scroll", handleScroll);
     return () => {
       ctx.revert();
-      window.removeEventListener("scroll", handleScroll);
+      // window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const handleScroll = () => {
-    const st = window.pageYOffset || document.documentElement.scrollTop;
-    if (st === 0) {
-      setImageNumber(0); // Reset image number to 0 at the top of the page
-    } else if (st > 0) {
-      const newImageNumber = Math.min(62, Math.floor(st / 10)); // Adjust divisor to control speed of image change
-      setImageNumber(newImageNumber);
-    }
-  };
+  // const handleScroll = () => {
+  //   const st = window.pageYOffset || document.documentElement.scrollTop;
+  //   if (st === 0) {
+  //     setImageNumber(0); // Reset image number to 0 at the top of the page
+  //   } else if (st > 0) {
+  //     const newImageNumber = Math.min(62, Math.floor(st / 10)); // Adjust divisor to control speed of image change
+  //     setImageNumber(newImageNumber);
+  //   }
+  // };
 
-  const formattedNumber = String(imageNumber).padStart(3, "0");
-  const imageSrc = `./animation1/${formattedNumber}.webp`;
+  // const formattedNumber = String(imageNumber).padStart(3, "0");
+  // const imageSrc = `./animation1/${formattedNumber}.webp`;
 
   return (
     <>
-      <Navbar /> <img src={imageSrc} className={"hero-img"} alt="" />
+      <Navbar />
+      {/* <img src={imageSrc} className={"hero-img"} alt="" /> */}
+      <Spline
+        className={"hero-img"}
+        scene="https://prod.spline.design/qd3SBMHL72JWOztG/scene.splinecode"
+      />
       <div className="hero-text-wrap1">
         <h1 className="hero-title1">Hello</h1>
         <h1 className="hero-title2">World</h1>

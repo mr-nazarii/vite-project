@@ -17,7 +17,7 @@ li {
   top: 0px;
   scale: 0.7;
   transition: all 0.5s ease-in-out;
-  z-index: 20;
+  z-index: 1;
 }
 
 .hero-title1 {
