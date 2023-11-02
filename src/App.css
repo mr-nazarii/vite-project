@@ -83,6 +83,7 @@ li {
   height: 150vh;
   object-fit: cover;
   z-index: 1;
+  background-color: #000000;
 }
 
 .hero-desc-vid > p {

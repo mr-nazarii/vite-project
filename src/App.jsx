@@ -32,7 +32,7 @@ function App() {
           start: "300 center",
           end: "1400 center",
           scrub: true,
-          markers: true,
+          // markers: true,
           pin: true,
           onEnterBack: () =>
             gsap.to(".hero-title1", { opacity: 1, duration: 0.5 }),
@@ -46,7 +46,7 @@ function App() {
           start: "299 center",
           end: "1400 center",
           scrub: true,
-          markers: true,
+          // markers: true,
           pin: true,
           onEnterBack: () =>
             gsap.to(".hero-title2", { opacity: 1, duration: 0.5 }),
@@ -68,7 +68,7 @@ function App() {
           start: "0 center",
           end: "500 center",
           scrub: true,
-          markers: true,
+          // markers: true,
           pin: true,
           onEnterBack: () =>
             gsap.to(".hero-desc", { color: "black", duration: 0.5 }),
@@ -85,7 +85,7 @@ function App() {
           start: "0 center",
           end: "1000 center",
           scrub: true,
-          markers: true,
+          // markers: true,
           // onEnterBack: () =>
           //   gsap.to(".hero-title2", { opacity: 1, duration: 0.5 }),
           // onLeave: () => gsap.to(".hero-title2", { opacity: 0, duration: 0.5 }),
@@ -100,7 +100,7 @@ function App() {
           start: "0 center",
           end: "30 center",
           scrub: true,
-          markers: true,
+          // markers: true,
           // onEnterBack: () =>
           //   gsap.to(".hero-title2", { opacity: 1, duration: 0.5 }),
           // onLeave: () => gsap.to(".hero-title2", { opacity: 0, duration: 0.5 }),
@@ -115,7 +115,7 @@ function App() {
           start: "90 center",
           end: "110 center",
           scrub: true,
-          markers: true,
+          // markers: true,
           // onEnterBack: () =>
           //   gsap.to(".hero-title2", { opacity: 1, duration: 0.5 }),
           // onLeave: () => gsap.to(".hero-title2", { opacity: 0, duration: 0.5 }),
@@ -130,7 +130,7 @@ function App() {
           start: "90 center",
           end: "110 center",
           scrub: true,
-          markers: true,
+          // markers: true,
           // onEnterBack: () =>
           //   gsap.to(".hero-title2", { opacity: 1, duration: 0.5 }),
           // onLeave: () => gsap.to(".hero-title2", { opacity: 0, duration: 0.5 }),
@@ -188,7 +188,6 @@ function App() {
             ulpa debitis repellat earum necessitatibus cupiditate obcaecati.
           </span>
         </p>
-        <video autoPlay loop src="./12.mp4"></video>
       </div>
     </>
   );
