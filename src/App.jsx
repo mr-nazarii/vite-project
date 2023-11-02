@@ -158,7 +158,7 @@ function App() {
   };
 
   const formattedNumber = String(imageNumber).padStart(3, "0");
-  const imageSrc = `./animation1/${formattedNumber}.png`;
+  const imageSrc = `./animation1/${formattedNumber}.webp`;
 
   return (
     <>
